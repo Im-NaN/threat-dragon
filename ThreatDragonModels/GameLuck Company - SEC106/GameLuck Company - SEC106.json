@@ -136,8 +136,8 @@
           },
           {
             "position": {
-              "x": 840,
-              "y": 70
+              "x": 830,
+              "y": 60
             },
             "size": {
               "width": 160,
@@ -395,126 +395,6 @@
           },
           {
             "position": {
-              "x": 650,
-              "y": 397
-            },
-            "size": {
-              "width": 60,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "VPN"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "0d5da206-f1a7-4915-b445-cbe200227b65"
-                },
-                {
-                  "group": "right",
-                  "id": "5a2313d0-39c8-4bd2-b4e3-3472738ffc3f"
-                },
-                {
-                  "group": "bottom",
-                  "id": "bb183d7f-e045-407e-bc09-1ca3da904743"
-                },
-                {
-                  "group": "left",
-                  "id": "c111c265-7c25-45cd-9df7-bf7e4a1d6cf4"
-                }
-              ]
-            },
-            "id": "d2604cd2-307e-4f2c-99cf-77a4ba5a7ba9",
-            "zIndex": 4,
-            "data": {
-              "type": "tm.Process",
-              "name": "VPN",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": []
-            }
-          },
-          {
-            "position": {
               "x": 860,
               "y": 420
             },
@@ -676,52 +556,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Web Request (HTTP/S)",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Web Request (HTTP/S)"
-            ],
-            "id": "b10029c4-41ce-445d-bbce-137bc07ad7a3",
-            "source": {
-              "x": 290,
-              "y": 130
-            },
-            "target": {
-              "x": 850,
-              "y": 80
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Web response (HTTP/S)",
               "description": "",
               "outOfScope": false,
@@ -747,12 +581,208 @@
               "cell": "306405c4-c13e-436e-831c-7fb73f20a548",
               "port": "abd075ab-1202-48c4-b4b1-bf673e1fdab0"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Path traversal",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ba983564-ebac-473e-8580-263617817292",
+                  "title": "No Suggestions available",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Playeur can access NAS serveur information by usin CVE-2021-41773 or CVE-2021-42013",
+                  "mitigation": "Update Apache server to version > 2.5",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "5/5"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Path traversal"
+            ],
+            "id": "f10c649a-fd47-42a6-9726-fcb8836afad2",
+            "source": {
+              "cell": "306405c4-c13e-436e-831c-7fb73f20a548",
+              "port": "c94712b1-ca48-4796-a0bb-55d92fbd066d"
+            },
+            "target": {
+              "cell": "cf2474e8-47cb-4b88-a35f-43fb9ed37e1a",
+              "port": "0c76d8a8-c0ea-48dc-a327-a764b48448a5"
+            },
+            "vertices": [
+              {
+                "x": 370,
+                "y": 230
+              },
+              {
+                "x": 560,
+                "y": 300
+              },
+              {
+                "x": 720,
+                "y": 360
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Request (HTTP/S)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Web Request (HTTP/S)"
+            ],
+            "id": "b10029c4-41ce-445d-bbce-137bc07ad7a3",
+            "source": {
+              "x": 290,
+              "y": 130
+            },
+            "target": {
+              "cell": "cffd721f-c87e-4398-9801-6e8d2b359583",
+              "port": "c111c265-7c25-45cd-9df7-bf7e4a1d6cf4"
+            },
+            "vertices": [
+              {
+                "x": 460,
+                "y": 110
+              },
+              {
+                "x": 720,
+                "y": 90
+              },
+              {
+                "x": 800,
+                "y": 90
+              },
+              {
+                "x": 780,
+                "y": 125
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Access to NAS via VPN",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Access to NAS via VPN"
+            ],
+            "id": "ac4c44a3-f3fa-44c1-bf4b-0a1f90264805",
+            "source": {
+              "x": 270,
+              "y": 430
+            },
+            "target": {
+              "cell": "cf2474e8-47cb-4b88-a35f-43fb9ed37e1a",
+              "port": "07fec95b-5df7-492c-9abb-dc4c42780439"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": 430
+              }
+            ]
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 3
+    "threatTop": 5
   }
 }
