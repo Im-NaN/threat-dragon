@@ -18,6 +18,73 @@
         "version": "2.6.2",
         "cells": [
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "WebServer Zeta boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "b10029c4-41ce-445d-bbce-137bc07ad7a3"
+              ],
+              "containedElements": [
+                "cffd721f-c87e-4398-9801-6e8d2b359583"
+              ]
+            },
+            "labels": [
+              "WebServer Zeta boundary"
+            ],
+            "id": "fe4f8550-56b6-4e84-a2ae-a9de97fde788",
+            "source": {
+              "x": 800,
+              "y": 30
+            },
+            "target": {
+              "x": 1070,
+              "y": 220
+            },
+            "vertices": [
+              {
+                "x": 750,
+                "y": 100
+              },
+              {
+                "x": 780,
+                "y": 190
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
             "position": {
               "x": 150,
               "y": 100
@@ -628,7 +695,9 @@
                   "score": "5/5"
                 }
               ],
-              "trustBoundaryIds": [],
+              "trustBoundaryIds": [
+                "6de1c404-c5b2-41db-9176-398bb6497701"
+              ],
               "threatFrequency": {
                 "tampering": 0,
                 "informationDisclosure": 1,
@@ -693,7 +762,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "fe4f8550-56b6-4e84-a2ae-a9de97fde788"
+              ]
             },
             "labels": [
               "Web Request (HTTP/S)"
@@ -757,7 +828,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "6de1c404-c5b2-41db-9176-398bb6497701"
+              ]
             },
             "labels": [
               "Access to NAS via VPN"
@@ -777,6 +850,70 @@
                 "y": 430
               }
             ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 11,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "NAS Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "f10c649a-fd47-42a6-9726-fcb8836afad2",
+                "ac4c44a3-f3fa-44c1-bf4b-0a1f90264805"
+              ],
+              "containedElements": [
+                "cf2474e8-47cb-4b88-a35f-43fb9ed37e1a"
+              ]
+            },
+            "labels": [
+              "NAS Boundary"
+            ],
+            "id": "6de1c404-c5b2-41db-9176-398bb6497701",
+            "source": {
+              "x": 1060,
+              "y": 280
+            },
+            "target": {
+              "x": 710,
+              "y": 520
+            },
+            "vertices": [
+              {
+                "x": 770,
+                "y": 330
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           }
         ]
       }
